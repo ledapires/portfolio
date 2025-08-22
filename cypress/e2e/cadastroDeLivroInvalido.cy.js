@@ -1,6 +1,6 @@
 describe('CadastroInvalido', () => {
     beforeEach(() => {
-        cy.visit('/')
+      cy.visit('/') 
     })
 
   it('Cadastro de Livro Inválido', () => {
