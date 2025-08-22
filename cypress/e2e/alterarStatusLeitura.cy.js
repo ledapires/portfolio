@@ -1,14 +1,13 @@
 describe('Cadastro', () => {
     beforeEach(() => {
-       cy.visit('/') 
+        cy.visit('/')
     })
 
   it('Cadastro de Livros', () => {
-    
-    cy.fixture('registrosLivros').then((livro) => {
-      cy.get('#name').click().type(livro.livroValido.name)
-      cy.get('#isbn').click().type(livro.livroValido.isbn)
-      cy.get('#purchaseDate').click().type(livro.livroValido.purchaseDate)
+    cy.fixture('registrosLivros').then((livros) => {
+        cy.get('#name').click().type(livros.livroValido.name)
+        cy.get('#isbn').click().type(livros.livroValido.isbn)
+        cy.get('#purchaseDate').click().type(livros.livroValido.purchaseDate)
     })
 
     cy.get('button').click()
